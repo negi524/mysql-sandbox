@@ -16,6 +16,13 @@ $ docker container run -it --name "mysql-container" --mount type=bind,source=(pw
 $ docker container run -it --name "mysql-container" --mount type=bind,source=$(pwd)/resources/initdb.d,target=/docker-entrypoint-initdb.d -d mysql-sample:1.0
 ```
 
+## コンテナに接続
+
+TODO
+
+## DBへの疎通確認
+
+TODO
 
 ## 他の操作コマンド
 
