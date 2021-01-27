@@ -10,10 +10,10 @@ $ docker build -t mysql-sample:1.0 .
 
 ```bash
 # fishの場合
-$ docker container run -it --name "mysql-container" --mount type=bind,source=(pwd)/resources/initdb.d,target=/docker-entrypoint-initdb.d -d mysql-sample:1.0
+$ docker container run -it --name "mysql-container" --mount type=bind,source=(pwd)/resources/initdb.d,target=/docker-entrypoint-initdb.d -p 3306:3306 -d mysql-sample:1.0
 
 # bashの場合
-$ docker container run -it --name "mysql-container" --mount type=bind,source=$(pwd)/resources/initdb.d,target=/docker-entrypoint-initdb.d -d mysql-sample:1.0
+$ docker container run -it --name "mysql-container" --mount type=bind,source=$(pwd)/resources/initdb.d,target=/docker-entrypoint-initdb.d -p 3306:3306 -d mysql-sample:1.0
 ```
 
 ## コンテナに接続
@@ -26,7 +26,12 @@ $ docker container exec -it mysql-container /bin/bash
 
 ## DBへの疎通確認
 
-TODO
+```bash
+$ mysql -h 0.0.0.0 -u root -p
+Enter password: my-secret-pw
+
+mysql>
+```
 
 ## 他の操作コマンド
 
