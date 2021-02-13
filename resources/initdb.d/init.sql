@@ -12,3 +12,17 @@ CREATE TABLE employee
 
 INSERT INTO employee (id, name) VALUES (1, "Nagaoka");
 INSERT INTO employee (id, name) VALUES (2, "Tanaka");
+
+DROP TABLE IF EXISTS skill;
+
+CREATE TABLE skill
+(
+  id            INT(10),
+  employee_id   INT(10),
+  language  VARCHAR(40)
+);
+
+INSERT INTO skill (id, employee_id, language) VALUES (1, 1, "JavaScript");
+INSERT INTO skill (id, employee_id, language) VALUES (2, 1, "HTML");
+INSERT INTO skill (id, employee_id, language) VALUES (3, 1, "CSS");
+INSERT INTO skill (id, employee_id, language) VALUES (4, 2, "Java");
