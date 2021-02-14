@@ -10,11 +10,13 @@ CREATE TABLE employee
   name     VARCHAR(40)
 );
 
+-- employeeテーブルを作成する
 INSERT INTO employee (id, name) VALUES (1, "Nagaoka");
 INSERT INTO employee (id, name) VALUES (2, "Tanaka");
 
 DROP TABLE IF EXISTS skill;
 
+-- skillテーブルを作成する
 CREATE TABLE skill
 (
   id            INT(10),
