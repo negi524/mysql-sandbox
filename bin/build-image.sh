@@ -15,7 +15,7 @@ if [[ $version} =~ [0-9]\.* ]]; then
 else
   # 実行ファイル名を取得
   progname=$(basename "$0")
-  echo "バージョンを指定してください."
-  echo "例: ${progname} 1.0"
+  echo "バージョンを指定してください." 1>&2
+  echo "Usage: ${progname} 1.0" 1>&2
   exit 1
 fi
