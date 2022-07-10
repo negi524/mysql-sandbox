@@ -1,4 +1,4 @@
-# mysql-sample
+# mysql-sandbox
 
 ## イメージの生成
 
