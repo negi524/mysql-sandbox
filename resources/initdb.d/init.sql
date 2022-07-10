@@ -7,7 +7,8 @@ DROP TABLE IF EXISTS employee;
 CREATE TABLE employee
 (
   id           INT(10),
-  name     VARCHAR(40)
+  name     VARCHAR(40),
+  PRIMARY KEY(id)
 );
 
 -- employeeテーブルを作成する
@@ -21,7 +22,8 @@ CREATE TABLE skill
 (
   id            INT(10),
   employee_id   INT(10),
-  language  VARCHAR(40)
+  language  VARCHAR(40),
+  PRIMARY KEY(id)
 );
 
 INSERT INTO skill (id, employee_id, language) VALUES (1, 1, "JavaScript");
