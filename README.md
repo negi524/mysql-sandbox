@@ -3,13 +3,13 @@
 ## イメージの生成
 
 ```bash
-docker build -t mysql-sample:1.0 .
+make build-image
 ```
 
 ## 生成したイメージからコンテナの起動
 
 ```bash
-docker container run -it --name "mysql-container" --mount type=bind,source=$(pwd)/resources/initdb.d,target=/docker-entrypoint-initdb.d -p 3306:3306 -d mysql-sample:1.0
+make run-container
 ```
 
 ## コンテナに接続
@@ -48,13 +48,13 @@ docker container ls -a
 ### コンテナを停止
 
 ```bash
-docker container stop mysql-container
+make stop-container
 ```
 
 ### コンテナを削除
 
 ```bash
-docker container rm mysql-container
+make remove-container
 ```
 
 ### イメージ一覧を確認
@@ -66,5 +66,5 @@ docker images
 ### イメージを削除
 
 ```bash
-docker image rm mysql-sample:1.0
+make remove-image
 ```
