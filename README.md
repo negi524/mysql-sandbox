@@ -23,7 +23,7 @@ docker container exec -it mysql-container /bin/bash
 ## DBへの疎通確認
 
 ```bash
-$ mysql -h 0.0.0.0 -u root -p
+$ mysql -h localhost -u root -p -D sample --protocol=tcp
 Enter password: my-secret-pw
 
 mysql>
@@ -67,4 +67,11 @@ docker images
 
 ```bash
 make remove-image
+```
+
+### 起動時のログを確認
+
+```bash
+$ docker container ls -a
+$ docker logs <コンテナID>
 ```
