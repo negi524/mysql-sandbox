@@ -18,7 +18,11 @@ make build-image
 make run-container
 ```
 
+※このとき、データはボリュームへ永続化される。
+
 ## データのクリーンアップ
+
+`remove-volume`により、永続化データも削除する。
 
 ```bash
 make stop-container remove-container remove-volume remove-image
