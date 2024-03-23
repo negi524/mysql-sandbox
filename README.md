@@ -83,4 +83,10 @@ $ docker container ls -a
 $ docker logs <コンテナID>
 ```
 
+### スキーマ自動生成
+
+```bash
+tbls doc --rm-dist
+```
+
 </details>

@@ -1,0 +1,11 @@
+# Usage: https://github.com/k1LoW/tbls
+
+er:
+  format: mermaid
+
+# DSN (Database Source Name) to connect database
+dsn: mysql://root:my-secret-pw@localhost:3306/sample
+
+# Path to generate document
+# Default is `dbdoc`
+docPath: doc/schema
