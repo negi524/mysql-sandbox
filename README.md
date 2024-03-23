@@ -1,15 +1,28 @@
 # mysql-sandbox
 
-## イメージの生成
+## 起動方法
+
+### 0. 環境
+
+Dockerが動く環境を用意する
+
+### 1. Dockerイメージの作成
 
 ```bash
 make build-image
 ```
 
-## 生成したイメージからコンテナの起動
+### 2. 生成したイメージからコンテナの起動
 
 ```bash
 make run-container
+```
+
+## データのクリーンアップ
+TODO
+
+```bash
+make stop-container remove-container remove-volume remove-image
 ```
 
 ## コンテナに接続
@@ -30,6 +43,9 @@ mysql>
 ```
 
 ## 他の操作コマンド
+
+<details>
+<summary>他の操作コマンド</summary>
 
 ### コンテナの状態を確認
 
@@ -75,3 +91,5 @@ make remove-image
 $ docker container ls -a
 $ docker logs <コンテナID>
 ```
+
+</details>
