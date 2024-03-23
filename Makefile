@@ -7,6 +7,7 @@ run-container:
 	docker container run -it \
 	--name "mysql-container" \
 	--mount type=bind,source=$(CURDIR)/resources/initdb.d,target=/docker-entrypoint-initdb.d \
+	--mount type=bind,source=$(CURDIR)/resources/etc/mysql/my.cnf,target=/etc/mysql/my.cnf \
 	-v mysql-sandbox:/var/lib/mysql \
 	-p 3306:3306 \
 	-d mysql-sample:1.0
