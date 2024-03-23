@@ -19,7 +19,6 @@ make run-container
 ```
 
 ## データのクリーンアップ
-TODO
 
 ```bash
 make stop-container remove-container remove-volume remove-image
@@ -61,28 +60,16 @@ docker container ls
 docker container ls -a
 ```
 
-### コンテナを停止
-
-```bash
-make stop-container
-```
-
-### コンテナを削除
-
-```bash
-make remove-container
-```
-
 ### イメージ一覧を確認
 
 ```bash
 docker images
 ```
 
-### イメージを削除
+### ボリューム一覧を確認
 
 ```bash
-make remove-image
+docker volume ls
 ```
 
 ### 起動時のログを確認
